@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Sarabun', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+p {
+    font-weight: 500;
+    color: #5d5b5b;
+}
+
+section{
+    padding: 60px 0px 90px;
+}
+/* header from here  */
+
+nav img {
+    width: 140px;
+}
+nav li a {
+    font-size: 19px;
+    margin: 0 10px;
+    padding: 7px 10px;
+    color: #3eafff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    display: inline-block;
+}
+nav li a:hover:not(.menu_active){
+    color: #053fff;
+}
+.menu_active {
+    background: #ff70b2;
+    color: #fff;
+    box-shadow: 0px 2px 7px -2px #000000b8;
+}
+.menu_active:hover{
+    color: #fff;
+}
+
+/* Home from here  */
+
+#home .col-md-6 svg{
+    width: 100%;
+    height: auto;
+}
+#home .col-md-6 h1 span{
+    color: #ff256b;
+    font-size: 50px;
+    text-shadow: 3px 2px 3px #bb62ff;
+    font-family: 'Lobster Two', sans-serif;
+    font-weight: 900;
+}
+#home .col-md-6 h1 b{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.btns {
+    color: #c00641;
+    font-weight: 700;
+    font-size: 17px;
+    position: relative;
+    padding: 8px 2px;
+    border-radius: 23px;
+    padding-bottom: 9px;
+}
+.btns span{
+    border-radius: 23px;
+    display: inline-block;
+    background: #fff;
+    padding: 5px 17px;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    z-index: 3;
+    position: relative;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    -ms-border-radius: 23px;
+    -o-border-radius: 23px;
+}
+.btns::before,
+.btns::after
+{
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    left: -3px;
+    bottom: -3px;
+    background: linear-gradient(to right bottom,#ff256b,#fa17de,#42ff59,#09d1f1);
+    z-index: 1;
+    border-radius: 23px;
+}
+.btns::after{
+    z-index: 2;
+    background: linear-gradient(to right bottom,#ff0151,#ff00e1,#00ff1e,#00ddff);
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
+.btns:hover span{
+    color: #fff;
+    background: #390cff83;
+}
+.btns:hover::before,
+.btns:hover::after{
+    background: linear-gradient(to left bottom,#ff0151,#ff00e1,#00c410,#00ddff);
+}
+#left_glass,#right_glass {
+    animation: cgColor 2s linear infinite alternate;
+    -webkit-animation: cgColor 2s linear infinite alternate;
+}
+@keyframes cgColor {
+    0%{
+        fill: rgb(233, 19, 83);
+    }
+    20%{
+        fill: rgb(19, 165, 233);
+    }
+    40%{
+        fill: rgb(19, 233, 65);
+    }
+    60%{
+        fill: rgb(193, 37, 255);
+    }
+    80%{
+        fill: rgb(86, 111, 255);
+    }
+    100%{
+        fill: rgb(255, 37, 164);
+    }
+}
+#left_leave, #right_leave{
+    animation: rot 3s linear infinite alternate;
+    -webkit-animation: rot 3s linear infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes rot {
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    30%{
+        transform: rotate(50deg);
+        -webkit-transform: rotate(50deg);
+        -moz-transform: rotate(50deg);
+        -ms-transform: rotate(50deg);
+        -o-transform: rotate(50deg);
+    }
+    100%{
+        transform: rotate(-50deg);
+        -webkit-transform: rotate(-50deg);
+        -moz-transform: rotate(-50deg);
+        -ms-transform: rotate(-50deg);
+        -o-transform: rotate(-50deg);
+    }
+}
+p span {
+    color: #ff20ac;
+    font-weight: bold;
+    font-size: 19px;
+}
+.card.m-auto {
+    box-shadow: 0px 0px 24px -3px #00000047;
+}
+.card h5 {
+    font-weight: 800;
+    color: #dc2066;
+    font-size: 23px;
+    text-shadow: 1px 1px 2px #0000006b;
+}
+.und_ln span{
+    position: relative;
+}
+.und_ln span::before,
+.und_ln span::after
+{
+    content: "";
+    background: #e20f49;
+    position: absolute;
+    height: 3px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.und_ln span::before{
+    width: 110%;
+    bottom: -21%;
+}
+.und_ln span::after{
+    width: 70%;
+    bottom: -41%;
+}
+.und_ln{
+    font-weight: 700;
+}
+#hand{
+    animation: rot2 .7s linear infinite alternate;
+    -webkit-animation: rot2 .7s linear infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes rot2 {
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    100%{
+        transform: translateY(-20px) rotate(-50deg);
+        -webkit-transform: translateY(-20px) rotate(-50deg);
+        -moz-transform: translateY(-20px) rotate(-50deg);
+        -ms-transform: translateY(-20px) rotate(-50deg);
+        -o-transform: translateY(-20px) rotate(-50deg);
+    }
+}
+#screen{
+    animation: cgColor 2s linear infinite alternate;
+    -webkit-animation: cgColor 2s linear infinite alternate;
+}
+#leaves-1{
+    transform-origin: bottom;
+    transform-box: fill-box;
+    animation: leave 2s linear infinite;
+    -webkit-animation: leave 2s linear infinite;
+}
+#leaves-2{
+    transform-origin: bottom;
+    transform-box: fill-box;
+    animation: leave2 1.5s linear infinite;
+    -webkit-animation: leave2 1.5s linear infinite;
+}
+@keyframes leave2 {
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+}
+    30%{
+        transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
+        -moz-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+        -o-transform: rotate(15deg);
+}
+    55%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+}
+    75%{
+        transform: rotate(-15deg);
+        -webkit-transform: rotate(-15deg);
+        -moz-transform: rotate(-15deg);
+        -ms-transform: rotate(-15deg);
+        -o-transform: rotate(-15deg);
+}
+    100%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+}
+}
+@keyframes leave {
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+}
+    30%{
+        transform: rotate(-17deg);
+        -webkit-transform: rotate(-17deg);
+        -moz-transform: rotate(-17deg);
+        -ms-transform: rotate(-17deg);
+        -o-transform: rotate(-17deg);
+}
+    50%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+}
+    75%{
+        transform: rotate(17deg);
+        -webkit-transform: rotate(17deg);
+        -moz-transform: rotate(17deg);
+        -ms-transform: rotate(17deg);
+        -o-transform: rotate(17deg);
+}
+    100%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+}
+}
+.btns.mt-3{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: inline-block;
+}
+
+.mode{
+    display: inline-block;
+    position: absolute;
+    background: #c70858;
+    color: #fff;
+    user-select: none;
+    padding: 8px;
+    border-radius: 25px 0px 25px 0px;
+    top: 15%;
+    left: 1%;
+}
+.mode label{
+    cursor: pointer;
+}
+.mode input{
+    margin-right: 5px;
+    appearance: none;
+    width: 30px;
+    height: 17px;
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+}
+.mode input::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 5px #0000009e
+}
+.mode input::after{
+    content: "";
+    position: absolute;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    border-radius: 50%;
+    background: #0aadbd;
+    transition: all .7s ease;
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    -ms-transition: all .7s ease;
+    -o-transition: all .7s ease;
+}
+.mode input:checked::after{
+    left: 50%;
+    box-shadow: 0px 0px 10px 3px rgb(79, 255, 255);
+}
+
+/* Dark mode */
+
+.dark{
+    background: #2c040d;
+    color: #fff;
+}
+.dark #home p{
+    color: #fff;
+}
+.dark #home h1:not(.und_ln) span,.dark #home p span{
+    text-shadow: 3px 3px 3px #000;
+}
+.dark nav li a:hover:not(.menu_active){
+    color: #39f8ff;
+}
+.dark .menu_active{
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* Responsive css */
+@media screen and (max-width:925px) {
+    .mode{
+        left: auto;
+        right: 1%;
+    }
+}
